@@ -28,6 +28,23 @@ If you're comfortable with Github and JSON files, feel free to simply create a n
 
 Please make sure that the translations you provide are as close as possible to the original meaning - try not to alter roles or locations, as I'd like the game to still be playable when different players in the same game are using different languages.
 
+## Development
+
+### Run
+
+After cloning (see below for more details):
+
+1. `cd spyfall/spyfall`
+2. `yarn install`
+3. `yarn start`
+
+### Deploy to Heroku
+
+1. `heroku buildpacks:add https://github.com/AdmitHub/meteor-buildpack-horse.git`
+2. `heroku config:set METEOR_APP_DIR=spyfall`
+3. `heroku config:set METEOR_SETTINGS="$(cat spyfall/settings.json)"`
+4. `git push heroku master`
+
 ## Running your own instance with custom locations
 
 [Install meteor](https://www.meteor.com/install)
